@@ -1,1 +1,7 @@
+# Ignorar a pasta do ambiente virtual
 venv/
+
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
