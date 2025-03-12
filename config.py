@@ -3,9 +3,11 @@ from dotenv import load_dotenv
 
 # Determinar qual arquivo .env carregar
 env_file = ".env.local" if os.getenv("ENV") == "local" else ".env"
-
 # Carregar variáveis do arquivo correspondente
 load_dotenv(env_file)
+
+print(f"Carregando {env_file}...") 
+print(f"DEBUG: MONGO_URI='{os.getenv('MONGO_URI')}'")
 
 # Obter variáveis do ambiente
 POKEAPI_URL = os.getenv("POKEAPI_URL")

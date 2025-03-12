@@ -14,7 +14,15 @@ Após essa configurações, vamos criar o arquivo requirements.txt para registra
 
 Para executar a APP no servidor Uvicorn
 
-    'uvicorn main:app --reload'
+    'uvicorn main:app --reload' /  'ENV=local uvicorn main:app --reload'
+
+Caso alguma variavel fique locada em memoria, você pode ver o valor em memoria e excluir com os seguintes comandos
+
+    echo $MONGO_URI  /  unset MONGO_URI
 
 A URL local para essa APP será, http://127.0.0.1:8000/ 
 dentro do FastApi já temos o Swagger gerado de forma automatica, podendo acessar http://127.0.0.1:8000/docs
+
+
+lsof -i :8000 
+kill -9 10874
